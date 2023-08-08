@@ -20,9 +20,12 @@
             <form class="box_color_align">
                 <input class="textbox" id="id" type="text" name="text" placeholder="Enter id"><br>
                 <input class="textbox" id="password" type="password" name="password" placeholder="Password">
+                <div class="wrongid"><p class="tndc" style="color: red;">Wrong id or password!!</p></div>
+                <div class="inputid"><p class="tndc">Enter id and password!!</p></div>
                 <button type="submit" class="log_in" id="logIn">Log in</button>
-                <div class="box_color_align"><a class="forgotten" href="#">Forgotten Password?</a></div>
-                <div class="box_color_align line"></div>
+                <div><a class="forgotten" href="#">Forgotten Password?</a></div>
+                <div class="line"></div>
+                <p class="sign_p">You need to sign up!!</p>
                 <div class="box_color_align">
                     <a class="sign_up" role="button" href="#">Sign Up</a>
                 </div>
@@ -42,13 +45,13 @@
         <div class="sign_up_form box_color_align">
             <form class="box_color_align">
                 <div class="gender">
-                    <input class="textbox half" type="text" id="fname" name="fname" placeholder="First Name">
-                    <input class="textbox half" type="text" name="lname" placeholder="Last Name">
+                    <input class="req textbox half" type="text" name="fname" placeholder="First Name">
+                    <input class="req textbox half" type="text" name="lname" placeholder="Last Name">
                 </div>
-                <input class="textbox" type="text" name="contact" placeholder="Mobile number or Email address">
-                <div class="box_color_align"><p class="dob">Date of Birth</p></div>
-                <input class="textbox" type="date" name="dob">
-                <div class="box_color_align"><p class="dob">Gender</p></div>
+                <input class="req textbox" type="text" name="contact" placeholder="Mobile number or Email address">
+                <div><p class="dob" >Date of Birth</p></div>
+                <input class="textbox req" type="date" name="dob">
+                <div><p class="dob">Gender</p></div>
                 <div class="gender">
                     <div class="textbox half">
                         <input type="radio" name="gender">Male
@@ -57,11 +60,16 @@
                         <input  type="radio" name="gender">Female
                     </div>
                 </div>
-                <input class="textbox" style="margin-bottom: 0;" id="newpass" type="password" name="newpass" placeholder="Choose a password">
-                <div class="box_color_align tndc"><p>By clicking Sign Up, you agree to our <a href="#" style="font-size: 8px; text-decoration: underline; color: blue;">Terms</a>, <a href="#" style="font-size: 8px; text-decoration: underline; color: blue;">Privacy Policy</a> and <a href="#" style="font-size: 8px; text-decoration: underline; color: blue;">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p></div>
+                <input class="textbox req" style="margin-bottom: 0;" name="newpass" placeholder="Choose a password">
+                <div class="tndc">
+                    <p>* All fields are required</p>
+                    <p>By clicking Sign Up, you agree to our <a href="#" style="font-size: 8px; text-decoration: underline; color: blue;">Terms</a>, <a href="#" style="font-size: 8px; text-decoration: underline; color: blue;">Privacy Policy</a> and <a href="#" style="font-size: 8px; text-decoration: underline; color: blue;">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p>
+                </div>
                 
-                <div class="box_color_align line"></div>
-                <div class="box_color_align">
+                <div class="line"></div>
+                <p class="sign_p fillall">Kindly fill all fields!!</p>
+                <p class="alext">User already exist!!</p>
+                <div>
                     <a class="sign_up addData" style="transition: none;" role="button" href="#">Sign Up</a>
                 </div>
             </form>

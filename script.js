@@ -1,17 +1,17 @@
 var database = 
 [
-    // {
-    //     username:"Manish",
-    //     password:"123"
-    // },
-    // {
-    //     username:"Aniket",
-    //     password:"123"
-    // },
-    // {
-    //     username:"Rahul",
-    //     password:"123"
-    // }
+    {
+        username:"Manish",
+        password:"123"
+    },
+    {
+        username:"Aniket",
+        password:"123"
+    },
+    {
+        username:"Rahul",
+        password:"123"
+    }
 ]
 
 var userid=document.getElementById("id")
@@ -29,8 +29,14 @@ var sign_up=document.querySelector(".sign_up_bg")
 var cut=document.querySelector(".cut")
 
 var addData=document.querySelector(".addData")
-var newid=document.getElementById("fname")
+var req=document.querySelectorAll(".req")
 var newpass=document.getElementById("newpass")
+
+var sign_p=document.querySelector(".sign_p")
+var wrongid=document.querySelector(".wrongid")
+var inputid=document.querySelector(".inputid")
+var fillall=document.querySelector(".fillall")
+var exist=document.querySelector(".alext")
 
 var dark=false
 
@@ -65,11 +71,18 @@ function isUser(username,password)
 function log_in(username,password)
 {
     if(!validUser(username))
-    alert("You need to sign up first!")
+    {
+        sign_p.style.display="inline"
+        wrongid.style.display="none"
+    }
     else if(!isUser(username,password))
-    alert("Wrong id or password!!")
+    {
+        sign_p.style.display="none"
+        wrongid.style.display="inline"
+    }
     else
     window.location.href = "https://manishkrj.github.io/yummy/";
+    inputid.style.display="none"
 }
 
 
@@ -106,7 +119,9 @@ function setMode()
         cut.style.backgroundColor="#1d2129"
         dark=true
     }
-    
+    inputid.style.display="none"
+    sign_p.style.display="none"
+    wrongid.style.display="none"
 }
 function inputLength()
 {
@@ -120,26 +135,46 @@ function inputLength()
 function signPromptOn()
 {
     sign_up.style.visibility="visible"
+    sign_p.style.display="none"
+    wrongid.style.display="none"
+    inputid.style.display="none"
 }
 function signPromptOff()
 {
     sign_up.style.visibility="hidden"
 }
+
+function empty()
+{
+    var flag=false
+    req.forEach
+    (
+        function(i)
+        {
+            if(i.value.length===0)
+            flag=true
+        }
+    )
+    return flag
+}
+
 function adduser()
 {
-    if(newid.value.length==0 || newpass.value.length==0)
+    if(empty())
     {
-        alert("enter data")
+        fillall.style.display="inline"
+        exist.style.display="none"
     }
-    else if(!validUser(newid.value))
+    else if(!validUser(req[0].value))
     {
-        database.push({username:newid.value,password:newpass.value})
+        database.push({username:req[0].value,password:req[4].value})
+        fillall.style.display="none"
         signPromptOff()
     }
     else
     {
-        alert("user exists already!")
-        signPromptOff()
+        fillall.style.display="none"
+        exist.style.display="inline"
     }
 }
 
@@ -154,4 +189,10 @@ function logInAfterClick(e)
     e.preventDefault();
     if(inputLength())
     log_in(userid.value,userpassword.value)
+    else
+    {
+        inputid.style.display="inline"
+        wrongid.style.display="none"
+        sign_p.style.display="none"
+    }
 }
