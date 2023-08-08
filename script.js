@@ -131,7 +131,7 @@ function adduser()
     {
         alert("enter data")
     }
-    else if(!validUser(newid))
+    else if(!validUser(newid.value))
     {
         database.push({username:newid.value,password:newpass.value})
         signPromptOff()
