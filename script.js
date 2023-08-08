@@ -1,17 +1,17 @@
 var database = 
 [
-    {
-        username:"Manish",
-        password:"123"
-    },
-    {
-        username:"Aniket",
-        password:"123"
-    },
-    {
-        username:"Rahul",
-        password:"123"
-    }
+    // {
+    //     username:"Manish",
+    //     password:"123"
+    // },
+    // {
+    //     username:"Aniket",
+    //     password:"123"
+    // },
+    // {
+    //     username:"Rahul",
+    //     password:"123"
+    // }
 ]
 
 var userid=document.getElementById("id")
