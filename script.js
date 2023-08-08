@@ -127,13 +127,20 @@ function signPromptOff()
 }
 function adduser()
 {
-    if(!validUser(newid))
+    if(newid.value.length==0 || newpass.value.length==0)
+    {
+        alert("enter data")
+    }
+    else if(!validUser(newid))
     {
         database.push({username:newid.value,password:newpass.value})
+        signPromptOff()
     }
     else
-    alert("user exists already!")
-    signPromptOff()
+    {
+        alert("user exists already!")
+        signPromptOff()
+    }
 }
 
 mode.addEventListener("click",setMode)
