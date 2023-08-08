@@ -41,6 +41,31 @@ h1{
     /* margin: 10px; */
     box-sizing: border-box;
 }
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+      typing 2s steps(20, end),
+      blink-caret 1s step-end infinite,
+      slidein 0.5s ease 3s forwards;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+  @keyframes slidein {
+    100% {
+      border: transparent;
+    }
+  }
+
 .sign_in{
     padding: 10px;
     margin: 100px 30px;
