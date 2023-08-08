@@ -13,44 +13,6 @@ var database =
         password:"123"
     }
 ]
-function validUser(username)
-{
-    database.forEach
-    (
-        function(i)
-        {
-            if(i.username===username)
-            return true
-        }
-    )
-    return false
-}
-function isUser(username,password)
-{
-    var flag=false
-    database.forEach
-    (
-        function(i)
-        {
-            if(i.username===username && i.password===password)
-            return true
-        }
-    )
-    return false
-}
-
-
-function log_in(username,password)
-{
-    if(!validUser(username))
-    alert("You need to sign up first!")
-    else if(!isUser(username,password))
-    alert("Wrong id or password!!")
-    else
-    window.location.href = "https://manishkrj.github.io/yummy/";
-    
-}
-
 
 var userid=document.getElementById("id")
 var userpassword=document.getElementById("password")
@@ -71,6 +33,47 @@ var newid=document.getElementById("fname")
 var newpass=document.getElementById("newpass")
 
 var dark=false
+
+function validUser(username)
+{
+    var flag=false
+    database.forEach
+    (
+        function(i)
+        {
+            if(i.username===username)
+            flag=true
+        }
+    )
+    return flag;
+}
+function isUser(username,password)
+{
+    var flag=false
+    database.forEach
+    (
+        function(i)
+        {
+            if(i.username===username && i.password===password)
+            flag=true
+        }
+    )
+    return flag
+}
+
+
+function log_in(username,password)
+{
+    if(!validUser(username))
+    alert("You need to sign up first!")
+    else if(!isUser(username,password))
+    alert("Wrong id or password!!")
+    else
+    window.location.href = "https://manishkrj.github.io/yummy/";
+}
+
+
+
 
 function setMode()
 {
@@ -111,12 +114,7 @@ function inputLength()
     return (userid.value.length>0) && (userpassword.value.length>0);
 }
 
-function logInAfterClick(e)
-{   
-    e.preventDefault();
-    if(inputLength())
-    log_in(userid.value,userpassword.value)
-}
+
 
 
 function signPromptOn()
@@ -143,3 +141,10 @@ button.addEventListener("click",logInAfterClick)
 sign_button.addEventListener("click",signPromptOn)
 cut.addEventListener("click",signPromptOff)
 addData.addEventListener("click",adduser);
+
+function logInAfterClick(e)
+{   
+    e.preventDefault();
+    if(inputLength())
+    log_in(userid.value,userpassword.value)
+}
