@@ -1,0 +1,143 @@
+body{
+    margin: 0px;
+    background-color: #F0F2F5;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s;
+}
+div{
+    display: block;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.fixed{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #b3b3b3;
+}
+.mode{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #1d2129;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.bag{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-image: url("bag.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    padding: 30px;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.bag:hover{
+    padding: 35px;
+}
+.mode:hover{
+    padding: 9px;
+}
+.searchbox{
+    color: #1d2129;
+    border: 1px solid #dddfe2;
+    height: 22px;
+    line-height: 16px;
+    vertical-align: middle;
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 3% 5%;
+    margin: 2%;
+    width: 100%;
+}
+.box_color_align{
+    background-color: #FFFFFF;
+    text-align: center;
+}
+.searchicon{
+    height: 22px;
+}
+.image{
+    height: 150px;
+    width: 150px;
+    margin: 2%;
+}
+.fruitname{
+    margin: 2%;
+    padding: 3% 5%;
+    border: #dddfe2 solid 1px;
+    color: #1d2129;
+}
+.fruit{
+    margin: 2%;
+    padding: 1%;
+    border: #dddfe2 solid 1px;
+    display: inline;
+
+}
+.addbag{
+    background-color: #ffa600;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    text-shadow: none;
+    vertical-align: middle;
+    transition: all 0.3s;
+}
+.addbag:hover{
+    background-color: #dd9000;
+}
+.removebag{
+    background-color: #1d2129;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    text-shadow: none;
+    vertical-align: middle;
+    transition: all 0.3s;
+}
+.removebag:hover{
+    background-color: #000000;
+}

@@ -70,7 +70,7 @@ function log_in(username,password)
         wrongid.style.display="inline"
     }
     else
-    window.location.href = "https://manishkrj.github.io/yummy/";
+    window.location.href = "page.html";
     inputid.style.display="none"
 }
 
